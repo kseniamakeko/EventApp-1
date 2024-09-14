@@ -49,7 +49,7 @@ export default function SignUpOrganizationScreen({ navigation }) {
     <KeyboardAvoidingView
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-      keyboardVerticalOffset={100} 
+      keyboardVerticalOffset={100}
     >
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <TextInput
@@ -97,7 +97,7 @@ export default function SignUpOrganizationScreen({ navigation }) {
           onChangeText={setPassword}
           secureTextEntry
         />
-        <Button title="Зарегистрироваться" onPress={handleSubmit} />
+        <Button title="Зарегистрироваться" onPress={handleSubmit} color="#00668C" />
       </ScrollView>
     </KeyboardAvoidingView>
   );
@@ -106,6 +106,7 @@ export default function SignUpOrganizationScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#D4EAF7', 
   },
   scrollContainer: {
     flexGrow: 1,
@@ -113,10 +114,24 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    height: 45,
+    borderColor: '#3498DB', 
+    borderWidth: 2,
+    borderRadius: 10, 
     marginBottom: 15,
-    paddingLeft: 8,
+    paddingLeft: 15,
+    backgroundColor: '#FFFFFF', 
+    fontSize: 16,
+    color: '#2E2E2E', 
+  },
+  button: {
+    backgroundColor: '#00668C', 
+    borderRadius: 10, 
+    padding: 10,
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    textAlign: 'center',
   },
 });
