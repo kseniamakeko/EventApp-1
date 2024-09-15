@@ -11,6 +11,7 @@ import SignUpOrganizationScreen from './pages/SignUpOrganizationScreen';
 import EventApplyScreen from './pages/EventApplyScreen';
 import AddEventScreen from './pages/AddEventScreen';
 import { AuthProvider } from './context/AuthContext';
+import OrganizationPage from './componets/OrganizationPage';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -25,6 +26,8 @@ export default function App() {
           <Stack.Screen name='SignUpOrganization' component={SignUpOrganizationScreen} />
           <Stack.Screen name='EventApplyScreen' component={EventApplyScreen}/>
           <Stack.Screen name='AddEventScreen' component={AddEventScreen}/>
+          <Stack.Screen name='OrganizationPage' component={OrganizationPage}/>
+   
         </Stack.Navigator>
         <Menu/>
       </NavigationContainer>

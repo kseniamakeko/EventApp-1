@@ -12,7 +12,7 @@ export default function Menu() {
     if (userProfile?.type === 'Volunteer') {
       navigation.navigate('EventApplyScreen');
     } else if (userProfile?.type === 'Organization') {
-      navigation.navigate('AddEventScreen');
+      navigation.navigate('OrganizationPage');
     } else {
       navigation.navigate('Home');
     }

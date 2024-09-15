@@ -1,28 +1,22 @@
 import React from "react";
-import {
-  StyleSheet,
-  Modal,
-  TouchableWithoutFeedback,
-  View,
-  TouchableOpacity
-} from "react-native";
+import { StyleSheet, Modal as RNModal, TouchableWithoutFeedback, View, TouchableOpacity, Text, Keyboard } from "react-native";
 
-const Modal = ({ isOpen, onClose, children }) => {
+const CustomModal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
-    <Modal transperent={true} visible={isVisible} animationType="slide">
+    <RNModal transparent={true} visible={isOpen} animationType="slide">
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={StyleSheet.modalOverlay}>
-          <View style={StyleSheet.modalContent}>
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
             <TouchableOpacity onPress={onClose} style={styles.closeButton}>
-              <Text style={styles.closeButtonText}>×</Text>
+              <Text style={styles.closeButtonText}>x</Text>
             </TouchableOpacity>
             {children}
           </View>
         </View>
       </TouchableWithoutFeedback>
-    </Modal>
+    </RNModal>
   );
 };
 
@@ -50,4 +44,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Modal;
+export default CustomModal;
